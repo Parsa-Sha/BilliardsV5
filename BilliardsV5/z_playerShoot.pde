@@ -36,16 +36,19 @@ void mousePressed() { // Rotate origin, mouseDragged ignoring Y changes, only X.
     }
     */
     
+    // Future velocity idea?
     // Get cue rotation
     // Get mouse coordinates
     // Convert to radial coords, rotate by cue rotation, then convert back to cardinal and get mouseX
     // Once mouse is released, do the same and compare X distance
     // Convert finalVelocity cue rotation (.x), and X distance (.y), and convert to Cardinal in order to apply velocity.
     
+    /*
     finalVelocity.x = atan2(mouseY - myBalls.get(0).pos.y, mouseX - myBalls.get(0).pos.x); // Step 1: Get cue rotation
     distanceCalculation = new PVector(pow(mouseX - myBalls.get(0).pos.x, 2) + pow(mouseY - myBalls.get(0).pos.y, 2), atan2(mouseY - myBalls.get(0).pos.y, mouseX - myBalls.get(0).pos.x)); 
     // Step 2: Save location relative to ball, convert cardinal to polar
     distanceCalculation.y += finalVelocity.x; // Step 3: rotate according to angle
+    */
     
     beginPressed = new PVector(mouseX, mouseY);
   }
@@ -87,12 +90,11 @@ void mouseReleased() {
     */
     
     
-    // FINAL VELOCITY
-    finalVelocity = new PVector(pow(mouseX - myBalls.get(0).pos.x, 2) + pow(mouseY - myBalls.get(0).pos.y, 2) - distanceCalculation.x, atan2(mouseY - myBalls.get(0).pos.y, mouseX - myBalls.get(0).pos.x));
+    // finalVelocity = new PVector(pow(mouseX - myBalls.get(0).pos.x, 2) + pow(mouseY - myBalls.get(0).pos.y, 2) - distanceCalculation.x, atan2(mouseY - myBalls.get(0).pos.y, mouseX - myBalls.get(0).pos.x));
     
     
-    pb.setVelocity(finalVelocity.y * cos(finalVelocity.x), finalVelocity.y * sin(finalVelocity.x)); // Last step: Convert polar coordinates to velocity
+    //pb.setVelocity(finalVelocity.y * cos(finalVelocity.x), finalVelocity.y * sin(finalVelocity.x)); // Last step: Convert polar coordinates to velocity
     
-    
+    pb.setVelocity(10, 10);
   }
 }
