@@ -31,6 +31,7 @@ void newGame() {
   world.setGravity(0, 0);
   pb = new PlayerBall();
   pb.setPosition(263, 305);
+  pb.setVelocity(0, 0);
   pb.attachImage(ballImages[0]);
   pb.setFillColor(0);
   pb.setFriction(0.5);
