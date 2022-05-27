@@ -14,6 +14,7 @@
 // Bug fixes:
 //   Fix garbage holes [DONE]
 //   Fix newgame to reset ball positions
+//   Fix phisics (Make balls move properly and not slide)
 
 import fisica.*;
 
