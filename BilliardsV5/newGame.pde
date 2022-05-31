@@ -37,7 +37,7 @@ void newGame() {
   pb.setVelocity(0, 0);
   pb.attachImage(ballImages[0]);
   pb.setFillColor(0);
-  pb.setFriction(0.5);
+  pb.setFriction(1);
   pb.setRestitution(0.9);
   pb.setStatic(false);
   pb.setGrabbable(false);
@@ -116,8 +116,8 @@ void newGame() {
       world.add(b);
       b.attachImage(ballImages[ballArrangement[15-bpi]]);
       b.setPosition(800 - i*22.52, 250 + j*26 + i*13);
-      b.setFriction(0.5);
-      b.setRestitution(0.9);
+      b.setFriction(1);
+      b.setRestitution(0.96);
       b.setStatic(false);
       b.setGrabbable(false);
       bpi++;

@@ -29,6 +29,15 @@ void playerShoot() { // We will get back to the shooting code, don't worry about
   stroke(1);
   noFill();
   if (abs(pb.getVelocityX()) < 0.1 && abs(pb.getVelocityY()) < 0.1) ellipse(30, 30, 26, 26);
+  
+  for (int i = 0; i < myBalls.size(); i++) {
+    for (int j = 0; j < myBalls.size(); j++) {
+      if (i != j) {
+        Ball b1 = world.getBodies().get(i));
+        Ball b2 = world.getBodies().get(j));
+      }
+    }
+  }
 }
 
 void mousePressed() { // Rotate origin, mouseDragged ignoring Y changes, only X. Take X change, rotate back, and then apply velocity
