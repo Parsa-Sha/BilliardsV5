@@ -1,7 +1,6 @@
 void newGame() {
   newGame = false;
   velcel = true;
-  beginPressed = endPressed = new PVector(0, 0);
   
 
   for (int i = 0; i < ballArrangement.length; i++) ballArrangement[i] = 16;
