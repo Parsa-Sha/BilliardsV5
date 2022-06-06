@@ -22,7 +22,7 @@ void playerShoot() { // We will get back to the shooting code, don't worry about
     translate(pb.getX(), pb.getY());
     rotate(atan2(mouseY - beginPressed.y, mouseX - beginPressed.x) * int(!hasPressed));
     rotate(rotationPressed * int(hasPressed));
-    translate(20 + map(dist(beginPressed.x, beginPressed.y, mouseX, mouseY), 0, 100, 0, 10), -6); // Incorporate length of mouse dragged
+    translate(20 + map(dist(beginPressed.x, beginPressed.y, mouseX, mouseY), 0, 500, 0, 100), -6); // Incorporate length of mouse dragged
     if (checkVelRest() < 1) image(stick, 0, 0);
     popMatrix();
   }
@@ -36,8 +36,6 @@ void playerShoot() { // We will get back to the shooting code, don't worry about
     if (gameState == PLAYERSHOOT) {
       if (checkVelRest() < 1) beginPressed = new PVector(mouseX, mouseY);
     }
-    
-    
   }
 
   void mouseReleased() {

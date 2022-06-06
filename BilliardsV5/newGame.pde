@@ -89,6 +89,14 @@ void newGame() {
   bottomRight.setNoStroke();
   left.setNoStroke();
   right.setNoStroke();
+
+  // Set velocity to 0
+  topLeft.setVelocity(0, 0);
+  topRight.setVelocity(0, 0);
+  bottomLeft.setVelocity(0, 0);
+  bottomRight.setVelocity(0, 0);
+  left.setVelocity(0, 0);
+  right.setVelocity(0, 0);
   
   world.add(topLeft);
   world.add(topRight);

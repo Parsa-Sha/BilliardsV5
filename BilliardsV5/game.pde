@@ -16,6 +16,8 @@ void game() {
 
   world.step();
   world.draw();
+  calmVel();
+  println(pb.getVelocityX() + ", " + pb.getVelocityY());
 
   /*
   rect(85, 95, 370, 10); // Testing
@@ -55,7 +57,7 @@ void game() {
       dist(b.getX(), b.getY(), 480, 78) < 28 ||
       dist(b.getX(), b.getY(), 480, 521) < 28
       ) {
-      if (i == 0 || i == 8) mode = GAMEOVER;
+      if (checkVelRest() < 1 && (i == 0 || i == 8)) mode = GAMEOVER;
       world.remove(b);
       myBalls.remove(i);
     }
